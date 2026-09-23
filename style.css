@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1e1e24;
+  color: #eee;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- шапка ---------- */
+.header {
+  background: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffb703;
+}
+
+#search {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  width: 220px;
+}
+
+/* ---------- общее ---------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 30px 0 15px;
+}
+
+/* ---------- жанры ---------- */
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.genres button {
+  padding: 7px 15px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  background: transparent;
+  color: #eee;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.genres button:hover {
+  border-color: #ffb703;
+}
+
+.genres button.active {
+  background: #ffb703;
+  border-color: #ffb703;
+  color: #000;
+}
+
+/* ---------- карточки ---------- */
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #2b2b33;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.poster {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-info {
+  padding: 12px;
+}
+
+.card-info h3 {
+  font-size: 16px;
+}
+
+.card-info p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.rating {
+  color: #ffb703;
+  font-weight: bold;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  margin-top: 30px;
+}
+
+/* ---------- страница фильма ---------- */
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #ffb703;
+}
+
+.movie-page {
+  display: flex;
+  gap: 30px;
+}
+
+.movie-page .poster {
+  width: 300px;
+  height: 420px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  font-size: 26px;
+}
+
+.movie-info h1 {
+  margin-bottom: 5px;
+}
+
+.movie-info .genre-tag {
+  display: inline-block;
+  background: #ffb703;
+  color: #000;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.movie-info p {
+  margin-bottom: 10px;
+}
+
+.big-rating {
+  font-size: 32px;
+  color: #ffb703;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ---------- для телефонов ---------- */
+@media (max-width: 700px) {
+  .movie-page {
+    flex-direction: column;
+  }
+
+  .movie-page .poster {
+    width: 100%;
+    height: 300px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}

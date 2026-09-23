@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КиноСайт — все фильмы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">КиноСайт</a>
+    <input type="text" id="search" placeholder="Поиск фильма...">
+  </header>
+
+  <main class="container">
+    <h1>Фильмы</h1>
+
+    <div id="genres" class="genres"></div>
+
+    <div id="movies" class="movies"></div>
+
+    <p id="empty" class="empty" hidden>Ничего не найдено :(</p>
+  </main>
+
+  <footer class="footer">
+    <p>2026 КиноСайт - все права защищены</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
